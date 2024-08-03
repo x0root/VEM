@@ -6,10 +6,10 @@
   <a href="https://github.com/Pixelcraftch/AVEM">
   </a>
 
-  <h3 align="center">AVEM</h3>
+  <h3 align="center">VEM</h3>
 
   <p align="center">
-    Advanced Virtual Environment Manager
+    Virtual Environment Manager
     <br />
     <br />
     <br>
