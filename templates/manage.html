@@ -143,7 +143,36 @@
                 <button type="submit">Open Terminal</button>
             </form>
         </div>
+        <div class="terminal-container">
+            <h2>Container Terminal</h2>
+            <textarea id="terminal-input" placeholder="Type a command..."></textarea>
+            <button id="terminal-send">Send</button>
+            <div id="terminal-output"></div>
+        </div>
+        </div>
         <a href="/" class="back-link">Back to Home</a>
     </div>
+<script>
+        const terminalInput = document.getElementById('terminal-input');
+        const terminalSend = document.getElementById('terminal-send');
+        const terminalOutput = document.getElementById('terminal-output');
+
+        terminalSend.addEventListener('click', () => {
+            const command = terminalInput.value.trim();
+            if (command) {
+                fetch('/terminal/{{ name }}', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ command }),
+                })
+                .then(response => response.text())
+                .then(output => {
+                    terminalOutput.innerHTML += output + '\n';
+                    terminalInput.value = '';
+                })
+                .catch(error => console.error(error));
+            }
+        });
+    </script>
 </body>
 </html>
