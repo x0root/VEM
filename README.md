@@ -14,6 +14,8 @@
   <p align="center">
     Advanced Virtual Environment Manager
     <br />
+    <img alt="Static Badge" src="https://img.shields.io/badge/status%3A%2C%20beta">
+
   </p>
 </div>
 
