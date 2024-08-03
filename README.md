@@ -30,11 +30,15 @@ this tool allows developers to create, manage, and delete virtual environments e
    ```sh
    git clone https://github.com/Pixelcraftch/AVEM
    ```
-3. Install requirements.txt
+2. Change directory
+   ```sh
+   cd AVEM
+   ```
+4. Install requirements.txt
    ```sh
    pip install -r requirements.txt
    ```
-4. Run it
+5. Run it
    ```sh
    python3 AVEM.py
    ```
