@@ -42,4 +42,4 @@ this tool allows developers to create, manage, and delete virtual environments e
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the Apache-2.0 license License. See `LICENSE.txt` for more information.
