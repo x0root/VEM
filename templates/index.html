@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        #showcase {
+            min-height: 400px;
+            background: url('showcase.jpg') no-repeat 0 -400px;
+            text-align: center;
+            color: #fff;
+        }
+        #showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        #showcase p {
+            font-size: 20px;
+        }
+        .button {
+            display: inline-block;
+            color: #fff;
+            background: #333;
+            padding: 7px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background: #77aaff;
+            transition: 0.3s;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background: #77aaff;
+            transition: 0.3s;
+        }
+        .container-list {
+            margin-top: 20px;
+        }
+        .container-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .container-list li {
+            background: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .container-list a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background: #f4f4f4;
+        }
+        .container-list a:hover {
+            background: #77aaff;
+            color: #fff;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Container Management</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <form action="/create" method="post">
+                <input type="text" name="name" placeholder="Container Name" required>
+                <button type="submit">Create Container</button>
+            </form>
+        </div>
+        <div class="container-list">
+            <h2>Containers</h2>
+            <ul>
+                {% for name, container in containers.items() %}
+                <li>
+                    <span>{{ name }} - {{ container.status }}</span>
+                    <div>
+                        <a href="/manage/{{ name }}">Manage</a>
+                        <a href="/logs/{{ name }}">Logs</a>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Container</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background: #77aaff;
+            transition: 0.3s;
+        }
+        .container-actions {
+            margin-top: 20px;
+        }
+        .container-actions form {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .container-actions button {
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container-actions button:hover {
+            background: #77aaff;
+            transition: 0.3s;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            background: #f4f4f4;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .back-link:hover {
+            background: #77aaff;
+            color: #fff;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Manage Container</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <h2>Rename Container: {{ name }}</h2>
+            <form action="/rename/{{ name }}" method="post">
+                <input type="text" name="new_name" placeholder="New Container Name" required>
+                <button type="submit">Rename Container</button>
+            </form>
+        </div>
+        <div class="container-actions">
+            <form action="/toggle/{{ name }}" method="get">
+                <button type="submit">Toggle Status</button>
+            </form>
+            <form action="/delete/{{ name }}" method="get">
+                <button type="submit">Delete Container</button>
+            </form>
+            <form action="/open_terminal/{{ name }}" method="get">
+                <button type="submit">Open Terminal</button>
+            </form>
+        </div>
+        <a href="/" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>
