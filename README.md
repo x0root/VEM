@@ -24,9 +24,6 @@
 Advanced Virtual Environment Manager is an open-source project designed to simplify the management of Python virtual environments. With a user-friendly web interface built using Flask,
 this tool allows developers to create, manage, and delete virtual environments effortlessly.
 
-<bold>Tested on:</bold>
-<p>Windows 10/11</p>
-
 ### Installation
 
 1. Clone the repo
@@ -45,7 +42,11 @@ this tool allows developers to create, manage, and delete virtual environments e
    ```sh
    python3 AVEM.py
    ```
-   
+
+## Note 
+
+If you try this on Termux/Ubuntu,Kali,Etc use WebGUI to interact with the container terminal. This is because the program will error if you try to open terminal from the CLI on those platform.
+
 <!-- LICENSE -->
 ## License
 
