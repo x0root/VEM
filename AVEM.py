@@ -2,7 +2,7 @@ import os
 import subprocess
 import json
 import shutil
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, jsonify, request, redirect, url_for
 
 BANNER = """
       __      ________ __  __ 
@@ -207,6 +207,17 @@ def main():
             break
         else:
             print("Invalid choice.")
+
+@app.route('/terminal/<name>', methods=['POST'])
+def terminal(name):
+    command = request.get_json()['command']
+    try:
+        output = subprocess.check_output(command, shell=True, universal_newlines=True)
+        return jsonify({'output': output})
+    except subprocess.CalledProcessError as e:
+        return jsonify({'error': e.output.decode()}), 500
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == "__main__":
     main()
