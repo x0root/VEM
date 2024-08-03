@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Pixelcraftch/AVEM">
+  <a href="https://github.com/Pixelcraftch/VEM">
   </a>
 
   <h3 align="center">VEM</h3>
@@ -21,14 +21,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Advanced Virtual Environment Manager is an open-source project designed to simplify the management of Python virtual environments. With a user-friendly web interface built using Flask,
+Virtual Environment Manager is an open-source project designed to simplify the management of Python virtual environments. With a user-friendly web interface built using Flask,
 this tool allows developers to create, manage, and delete virtual environments effortlessly.
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Pixelcraftch/AVEM
+   git clone https://github.com/Pixelcraftch/VEM
    ```
 2. Change directory
    ```sh
@@ -40,7 +40,7 @@ this tool allows developers to create, manage, and delete virtual environments e
    ```
 5. Run it
    ```sh
-   python3 AVEM.py
+   python3 VEM.py
    ```
 
 ## Note 
