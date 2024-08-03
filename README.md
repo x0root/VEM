@@ -32,7 +32,7 @@ this tool allows developers to create, manage, and delete virtual environments e
    ```
 2. Change directory
    ```sh
-   cd AVEM
+   cd VEM
    ```
 4. Install requirements.txt
    ```sh
