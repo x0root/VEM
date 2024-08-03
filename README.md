@@ -50,4 +50,4 @@ If you try this on Termux/Ubuntu,Kali,Etc use WebGUI to interact with the contai
 <!-- LICENSE -->
 ## License
 
-Distributed under the Apache-2.0 license License. See `LICENSE.txt` for more information.
+Distributed under the Apache-2.0 license License. See `LICENSE` for more information.
