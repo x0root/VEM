@@ -14,6 +14,8 @@
   <p align="center">
     Advanced Virtual Environment Manager
     <br />
+    <br />
+    <br>
     <img alt="Static Badge" src="https://img.shields.io/badge/Made_with-Python-blue">
 
   </p>
