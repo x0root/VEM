@@ -16,7 +16,7 @@
     <br />
     <br />
     <br>
-    <img alt="Static Badge" src="https://img.shields.io/badge/Made_with-Python-blue">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Made_with-Python-blue"> <img alt="Static Badge" src="https://img.shields.io/badge/Status-Beta-orange"> 
 
   </p>
 </div>
